@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="看"></TextView>
+
+        <EditText
+            android:id="@+id/samecity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="北京" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="市"></TextView>
+
+        <AutoCompleteTextView
+            android:id="@+id/samesearchkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.88"
+            android:text="" />
+        <Button
+            android:id="@+id/same_next_data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dip"
+            android:text="下一组数据" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/samesearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:onClick="searchButtonProcess"
+            android:padding="10dip"
+            android:text="发送" />
+
+        <Button
+            android:id="@+id/samesearchNearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:onClick="searchNearbyProcess"
+            android:padding="10dip"
+            android:text="周边搜索" />
+
+        <Button
+            android:id="@+id/samesearchBound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:onClick="searchBoundProcess"
+            android:padding="10dip"
+            android:text="区域搜索" />
+    </LinearLayout>
+    <!--
+    <fragment
+        android:id="@+id/samemap"
+        class="com.baidu.mapapi.map.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    -->
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/samemap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clickable="true" />
+</LinearLayout>
